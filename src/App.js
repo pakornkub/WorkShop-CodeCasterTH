@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Header/>
-      <div>Hello Pakorn Worakrn</div>
+      <div>Hello Pakorn Worakarn</div>
     </div>
   );
 }
