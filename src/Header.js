@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Header() {
+function Header(props) {
+
+    let {currentUser,isLoggedIn} = props
 
     return (
-        <div>Header</div>
+        <div>Header {isLoggedIn && currentUser}</div>
     );
     
 }
