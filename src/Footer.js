@@ -1,7 +1,9 @@
 import React, {useState,useEffect} from 'react'
 
-function Footer() {
+const Footer = (props) => {
     
+    let {onTimerClick} = props;
+
     const [time, setTime] = useState(0)
 
     //useEffect run after Render
@@ -19,11 +21,12 @@ function Footer() {
     //ถ้าใส่เป็น Array ว่าง ([]) จะเป็นการทำงานเฉพาะตอน mount และ unmount
     //ถ้าใส่ state ลงไปใน Argument ([time]) มันจะทำงาน ก็ต่อเมื่อค่าที่ระบุลงไปนั้นมีการเปลี่ยนแปลง (อัพเดท)
 
-   console.log('render')
     return (
         <div>
             Footer Online Time {time}
+            <br/>
             <button type="button" onClick={() => setTime(curretTime => curretTime + 1) }>Add</button>
+            <button type="button" onClick={() => onTimerClick(time) }>Add Num</button>
         </div>
     )
 }

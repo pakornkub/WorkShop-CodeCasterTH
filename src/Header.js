@@ -1,11 +1,17 @@
 import React from 'react'
 
-function Header(props) {
+const Header = (props) => {
 
     let {currentUser,isLoggedIn} = props
 
+    const handleHeaderClicked = () => {
+
+        alert(currentUser)
+
+    }
+
     return (
-        <div>Header {isLoggedIn && currentUser}</div>
+        <div onClick={handleHeaderClicked}>Header {isLoggedIn && currentUser}</div>
     );
     
 }
